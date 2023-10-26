@@ -7,7 +7,8 @@ export const searchFromBooks = (searchTerm: string): BookItem[] => {
       book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       (book.subtitle &&
         book.subtitle.toLowerCase().includes(searchTerm.toLowerCase())) ||
-      book.author.toLowerCase().includes(searchTerm.toLowerCase())
+      book.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      book.isbn.toLowerCase().includes(searchTerm.toLowerCase())
   );
   return results;
 };
