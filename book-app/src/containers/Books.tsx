@@ -1,4 +1,5 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
+import BookList from "../components/BookList";
 import BookSearch from "../components/BookSearch";
 import { BookItem } from "../interfaces/bookInterfaces";
 import { searchFromBooks } from "../utils/search";
@@ -16,13 +17,13 @@ const BookSearchContainer: React.FC = () => {
     }
   };
 
-  const onSelectBook = (book: BookItem) => {
-    console.log(book);
-  };
-
-  // const handleRemoveBook = (book: BookItem) => {
+  // const onSelectBook = (book: BookItem) => {
   //   console.log(book);
   // };
+
+  const handleRemoveBook = (book: BookItem) => {
+    console.log(book);
+  };
 
   return (
     <div>
@@ -32,7 +33,7 @@ const BookSearchContainer: React.FC = () => {
         onSearchTermChange={setSearchTerm}
       />
 
-      {searchResults.length > 0 && (
+      {/* {searchResults.length > 0 && (
         <ul>
           {searchResults.map((book: BookItem) => (
             <li key={book.isbn} onClick={() => onSelectBook(book)}>
@@ -40,8 +41,8 @@ const BookSearchContainer: React.FC = () => {
             </li>
           ))}
         </ul>
-      )}
-      {/* <BookList books={selectedBooks} onRemoveBook={handleRemoveBook} /> */}
+      )} */}
+      <BookList books={searchResults} onRemoveBook={handleRemoveBook} />
     </div>
   );
 };

@@ -4,3 +4,7 @@
     margin-top: 2%;
     align-items: center;
 }
+
+.flex-row {
+    display: flex;
+}

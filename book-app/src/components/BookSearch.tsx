@@ -17,7 +17,8 @@ const BookSearch: React.FC<BookSearchProps> = ({
     <>
       <div className="search">
         <TextField
-          label="Search for books..."
+          label="Search"
+          placeholder="Search for books by title, subtitle, author, or ISBN"
           variant="outlined"
           value={searchTerm}
           onChange={(e) => onSearchTermChange(e.target.value)}
