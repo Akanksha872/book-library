@@ -36,6 +36,7 @@ const BookSearch: React.FC<BookSearchProps> = ({
           color="primary"
           onClick={() => onSearch(searchTerm)}
           style={{ marginLeft: "1%", height: "50%" }}
+          disabled={searchTerm.length < 3}
         >
           Search
         </Button>
